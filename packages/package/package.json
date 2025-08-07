@@ -50,7 +50,7 @@
 		"check": "tsc",
 		"check:all": "tsc && pnpm -r --filter=\"./**\" check",
 		"format": "pnpm lint --write",
-		"test": "uvu test \"^index.js$\""
+		"test": "NODE_OPTIONS=\"${NODE_OPTIONS:-} --experimental-strip-types\" uvu test \"^index.js$\""
 	},
 	"exports": {
 		"./package.json": "./package.json"
